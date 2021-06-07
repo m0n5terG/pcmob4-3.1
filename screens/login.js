@@ -29,9 +29,9 @@ export default function Login({ navigation }) {
   useEffect(() => {
     const unsubscribe = firebase.auth().onAuthStateChanged(function (user) {
     if (user) {
-    navigation.navigate('Chat', {id: user.id, email: user.email});
+    navigation.replace('Chat', {id: user.id, email: user.email});
     } else {
-    navigation.navigate('Login');
+    navigation.canGoBack()&&navigation.popToTop(); //('Login');
     }
     });
     return unsubscribe;
