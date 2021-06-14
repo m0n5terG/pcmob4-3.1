@@ -1,4 +1,4 @@
-import React, { useState, useLayoutEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { View, Text } from "react-native";
 import { MaterialIcons } from "@expo/vector-icons";
 import { GiftedChat, Avatar } from "react-native-gifted-chat"; 
@@ -7,7 +7,7 @@ import firebase from "../database/firebaseDB";
 export default function Chat({ navigation }) {
   const [messages, setMessages] = useState([]);
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     navigation.setOptions({
       headerLeft: () => (
         <View style={{ marginLeft: 20 }}>
