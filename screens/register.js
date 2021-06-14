@@ -20,7 +20,7 @@ export default function Register({ navigation }) {
     user.updateProfile({
     displayName: name,
     photoURL: imageURL ? imageURL : 
-    "https://www.google.com/url?sa=i&url=http%3A%2F%2Fnextleveltimetracker.com%2Fimages%2F&psig=AOvVaw2RTgDj3_PyHh5VmMHQGDxW&ust=1623172699057000&source=images&cd=vfe&ved=2ahUKEwi8m67Sg4bxAhXnL7cAHYDFAJoQr4kDegUIARDaAQ"
+    "http://nextleveltimetracker.com/images/male.png"
     })
     .then(function() {
 
